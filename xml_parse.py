@@ -63,43 +63,4 @@ def xml_to_dict(xml):
 	for child in xml:
 		lista.update(parsing_childs(child))
 	return lista
-	
-if __name__ == "__main__":
-	teste = """<?xml version="1.0" encoding="utf-8"?>
-<response>
-	<Count>2</Count>
-	<Messages>
-		<Message>
-			<Smstats>
-				<Smsstat>
-					<Id>1</Id>
-				</Smsstat>
-			</Smstats>
-			<Index>40001</Index>
-			<Phone>Vivo1</Phone>
-			<Content>Compartilhe seus dados via Open Finance com a Vivo para receber melhores ofertas. Autorize aqui: </Content>
-			<Date>2025-02-02 09:15:51</Date>
-			<Sca></Sca>
-			<SaveType>4</SaveType>
-			<Priority>0</Priority>
-			<SmsType>1</SmsType>
-		</Message>
-		<Message>
-			<Smstats>
-				<Smsstat>
-					<Id>1</Id>
-				</Smsstat>
-			</Smstats>
-			<Index>40001</Index>
-			<Phone>Vivo2</Phone>
-			<Content>Compartilhe seus dados via Open Finance com a Vivo para receber melhores ofertas. Autorize aqui: </Content>
-			<Date>2025-02-02 09:15:51</Date>
-			<Sca></Sca>
-			<SaveType>4</SaveType>
-			<Priority>0</Priority>
-			<SmsType>1</SmsType>
-		</Message>
-	</Messages>
-</response>"""
-	r = xml_to_dict(teste)
-	print(json.dumps(r, indent=2))
+

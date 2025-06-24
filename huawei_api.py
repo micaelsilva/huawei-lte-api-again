@@ -77,7 +77,7 @@ class Client:
 	@staticmethod
 	def process_error(xml):
 		x = next((x.text for x in xml.findall("./code")))
-		raise Exception(enums.errors.ResponseCodeEnum(int(x)))
+		raise Exception(enums.errors.ResponseCodeEnum(int(x)).name)
 
 	def xml_to_dict(self, xml):
 		lista = {}
@@ -98,16 +98,43 @@ class Client:
 	def network(self):
 		return self._run(self._request_post_get("net/network", "get"))
 	
+	def cell_info(self):
+		"""
+        Get the cell information.
+
+        :return: Cell information.
+
+        """
+		return self._run(self._request_post_get('net/cell-info'))
+
+	def register(self):
+		return self._run(self._request_post_get('net/register'))
+
 	def net_mode(self):
 		net_modes =  self._run(self._request_post_get("net/net-mode", "get"))
 		net_modes.update({
-			"NetworkMode": enums.net.NetworkModeEnum(net_modes["NetworkMode"]),
+			"NetworkMode": enums.net.NetworkModeEnum(net_modes["NetworkMode"]).name,
 			"NetworkBand": enums.net.NetworkBandEnum(
-				int("0x" + net_modes["NetworkBand"], 16)),
+				int("0x" + net_modes["NetworkBand"], 16)).name,
 			"LTEBand": enums.net.LTEBandEnum(
-				int("0x" + net_modes["LTEBand"], 16))
+				int("0x" + net_modes["LTEBand"], 16)).name
 		})
 		return net_modes
+
+	def set_net_mode(
+			self,
+			networkmode=enums.net.NetworkModeEnum.MODE_AUTO,
+			networkband=enums.net.NetworkBandEnum.ALL,
+			lteband=enums.net.LTEBandEnum.ALL):
+		return self._run(
+			self._request_post_get(
+				"net/net-mode",
+				data=create_xml(
+					{
+						'NetworkMode': networkmode.value,
+						'NetworkBand': hex(networkband.value)[2:],
+						'LTEBand': hex(lteband.value)[2:]
+					})))
 	
 	def current_plmn(self):
 		return self._run(self._request_post_get("net/current-plmn", "get"))
