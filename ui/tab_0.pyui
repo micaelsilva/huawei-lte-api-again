@@ -1,0 +1,57 @@
+[
+  {
+    "nodes" : [
+      {
+        "nodes" : [
+
+        ],
+        "frame" : "{{0, 6}, {308, 169}}",
+        "class" : "TextView",
+        "attributes" : {
+          "flex" : "WH",
+          "font_size" : 17,
+          "editable" : true,
+          "frame" : "{{54, -1}, {200, 200}}",
+          "spellchecking_type" : "default",
+          "class" : "TextView",
+          "uuid" : "B198F0F1-EF97-491E-A821-258400BBD2D9",
+          "alignment" : "left",
+          "autocorrection_type" : "default",
+          "name" : "textview1",
+          "font_name" : "<System>"
+        },
+        "selected" : false
+      },
+      {
+        "nodes" : [
+
+        ],
+        "frame" : "{{0, 183}, {308, 32}}",
+        "class" : "Button",
+        "attributes" : {
+          "action" : "button_press",
+          "frame" : "{{114, 84}, {80, 32}}",
+          "tint_color" : "RGBA(1.000000,1.000000,1.000000,1.000000)",
+          "title" : "Get Status",
+          "uuid" : "ADC93CA7-5BC1-4E6B-919F-D89BDB2F04A5",
+          "background_color" : "RGBA(0.300000,0.533333,1.000000,1.000000)",
+          "class" : "Button",
+          "name" : "btn_getstatus",
+          "font_size" : 15
+        },
+        "selected" : true
+      }
+    ],
+    "frame" : "{{0, 0}, {308, 215}}",
+    "class" : "View",
+    "attributes" : {
+      "background_color" : "RGBA(1.000000,1.000000,1.000000,1.000000)",
+      "enabled" : true,
+      "tint_color" : "RGBA(0.000000,0.478000,1.000000,1.000000)",
+      "name" : "General",
+      "border_color" : "RGBA(0.000000,0.000000,0.000000,1.000000)",
+      "flex" : ""
+    },
+    "selected" : false
+  }
+]

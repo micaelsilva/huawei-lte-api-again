@@ -1,0 +1,69 @@
+[
+  {
+    "nodes" : [
+      {
+        "nodes" : [
+
+        ],
+        "frame" : "{{6, 6}, {308, 32}}",
+        "class" : "Button",
+        "attributes" : {
+          "border_width" : 1,
+          "action" : "button_press",
+          "frame" : "{{120, 224}, {80, 32}}",
+          "tint_color" : "RGBA(0.349020,0.568627,1.000000,1.000000)",
+          "title" : "Devices",
+          "uuid" : "4D9A7843-5D8C-4D91-900C-E391B7312AE8",
+          "class" : "Button",
+          "corner_radius" : 3,
+          "border_color" : "RGBA(0.349020,0.568627,1.000000,1.000000)",
+          "name" : "devices_btn",
+          "font_size" : 15
+        },
+        "selected" : false
+      },
+      {
+        "nodes" : [
+
+        ],
+        "frame" : "{{6, 46}, {308, 29}}",
+        "class" : "SegmentedControl",
+        "attributes" : {
+          "action" : "segmented_control",
+          "flex" : "LR",
+          "segments" : "General|SMS",
+          "frame" : "{{100, 226}, {120, 29}}",
+          "class" : "SegmentedControl",
+          "uuid" : "853290D8-A557-4026-9454-C1B0334E8269",
+          "name" : "segmentedcontrol1"
+        },
+        "selected" : false
+      },
+      {
+        "nodes" : [
+
+        ],
+        "frame" : "{{6, 83}, {308, 215}}",
+        "class" : "View",
+        "attributes" : {
+          "frame" : "{{110, 190}, {100, 100}}",
+          "class" : "View",
+          "name" : "subviews",
+          "uuid" : "2C863033-6D45-4D40-8120-0F4433E01F7D"
+        },
+        "selected" : false
+      }
+    ],
+    "frame" : "{{0, 0}, {320, 480}}",
+    "class" : "View",
+    "attributes" : {
+      "tint_color" : "RGBA(0.000000,0.478000,1.000000,1.000000)",
+      "enabled" : true,
+      "border_color" : "RGBA(0.000000,0.000000,0.000000,1.000000)",
+      "name" : "Huawei",
+      "background_color" : "RGBA(1.000000,1.000000,1.000000,1.000000)",
+      "flex" : ""
+    },
+    "selected" : false
+  }
+]

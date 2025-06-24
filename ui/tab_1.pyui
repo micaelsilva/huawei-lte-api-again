@@ -1,0 +1,86 @@
+[
+  {
+    "nodes" : [
+      {
+        "nodes" : [
+
+        ],
+        "frame" : "{{0, 6}, {308, 32}}",
+        "class" : "TextField",
+        "attributes" : {
+          "uuid" : "C4CA115A-4C4A-49B3-9B5A-2D164E35927C",
+          "corner_radius" : 3,
+          "frame" : "{{54, 84}, {200, 32}}",
+          "border_color" : "RGBA(0.800000,0.800000,0.800000,1.000000)",
+          "border_width" : 1,
+          "action" : "button_press",
+          "alignment" : "left",
+          "autocorrection_type" : "no",
+          "text" : "",
+          "placeholder" : "Recipients:",
+          "font_name" : "<System>",
+          "spellchecking_type" : "no",
+          "class" : "TextField",
+          "name" : "sms_number",
+          "font_size" : 17
+        },
+        "selected" : false
+      },
+      {
+        "nodes" : [
+
+        ],
+        "frame" : "{{0, 46}, {308, 76}}",
+        "class" : "TextView",
+        "attributes" : {
+          "uuid" : "EBEE47F5-107B-457B-9A6B-D68A09A375A5",
+          "font_size" : 17,
+          "corner_radius" : 3,
+          "frame" : "{{54, -1}, {200, 200}}",
+          "border_color" : "RGBA(0.800000,0.800000,0.800000,1.000000)",
+          "editable" : true,
+          "border_width" : 1,
+          "alignment" : "left",
+          "autocorrection_type" : "yes",
+          "text" : "",
+          "font_name" : "<System>",
+          "spellchecking_type" : "yes",
+          "class" : "TextView",
+          "name" : "sms_content",
+          "flex" : "WH"
+        },
+        "selected" : false
+      },
+      {
+        "nodes" : [
+
+        ],
+        "frame" : "{{0, 130}, {308, 32}}",
+        "class" : "Button",
+        "attributes" : {
+          "action" : "button_press",
+          "frame" : "{{114, 84}, {80, 32}}",
+          "tint_color" : "RGBA(1.000000,1.000000,1.000000,1.000000)",
+          "title" : "Send",
+          "uuid" : "ADC93CA7-5BC1-4E6B-919F-D89BDB2F04A5",
+          "background_color" : "RGBA(0.300000,0.533333,1.000000,1.000000)",
+          "class" : "Button",
+          "name" : "btn_sms_send",
+          "font_size" : 15
+        },
+        "selected" : true
+      }
+    ],
+    "frame" : "{{0, 0}, {308, 215}}",
+    "class" : "View",
+    "attributes" : {
+      "name" : "SMS",
+      "enabled" : true,
+      "background_color" : "RGBA(1.000000,1.000000,1.000000,1.000000)",
+      "tint_color" : "RGBA(0.000000,0.478000,1.000000,1.000000)",
+      "border_color" : "RGBA(0.000000,0.000000,0.000000,1.000000)",
+      "flex" : ""
+    },
+    "selected" : false
+  }
+]
