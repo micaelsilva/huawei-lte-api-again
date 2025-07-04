@@ -135,7 +135,31 @@ class Client:
 						'NetworkBand': hex(networkband.value)[2:],
 						'LTEBand': hex(lteband.value)[2:]
 					})))
+
+	def set_connection_settings(
+			self,
+			roam_auto_connect_enable=1,
+			max_idle_time=600,
+			connect_mode=0,
+			mtu=1500,
+			auto_dial_switch=1,
+			pdp_always_on=0):
+		return self._run(
+			self._request_post_get(
+				"dialup/connection",
+				data=create_xml(
+					{
+						'RoamAutoConnectEnable': roam_auto_connect_enable,
+						'MaxIdelTime': max_idle_time,
+						'ConnectMode': connect_mode,
+						'MTU': mtu,
+						'auto_dial_switch': auto_dial_switch,
+						'pdp_always_on': pdp_always_on
+					})))
 	
+	def profiles(self):
+		return self._run(self._request_post_get("dialup/profiles", "get"))
+
 	def current_plmn(self):
 		return self._run(self._request_post_get("net/current-plmn", "get"))
 		
